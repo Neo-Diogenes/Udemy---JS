@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #4682B4;
+}
+
+.container{
+    max-width: 400px;
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+h1 {
+    text-align: center;
+}
+
+.relogio{
+    font-size: 3rem;
+}
+
+.pausado{
+    color:red;
+}

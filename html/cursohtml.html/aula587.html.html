@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.grid{
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 73px;
+}
+
+.grid::after {
+
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.grid .col {
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float: left;
+    padding: 15px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-top-left-radius: 45px;
+    box-shadow:inset 10px 5px 0px 0px blue;
+
+   
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    width: 100%;
+    background: black;
+    position: fixed;
+}
+.menu ul{
+   list-style: none;
+   display:block;
+   max-width: 1200px;
+   margin: 0 auto;
+    padding: 0 30px;
+}
+
+.menu ul li {
+    float:left;
+}
+
+.menu ul li a{
+    color: white;
+    display: block;
+    padding: 20px;
+
+}
+.menu ul li a:hover{
+    background: #fff;
+    color: black;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+
+}
+
+.full-page {
+    padding: 0 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 73px;
+    background: turquoise;
+}
+
+.full-page-content {
+   max-width: 1200px;
+   padding: 0 30px;
+   margin: 0 auto;
+}
+
+
+
+
+@media (max-width: 375px) {
+    .grid .col {
+        width: 100%;
+    }
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="menu">
+
+<ul> 
+
+<li><a href="#home">Home</a> </li>
+<li><a href="#full-page">full-page</a> </li>
+
+</ul>
+
+
+    </nav>
+
+    <div id="home" class="grid">
+    <div class="col">  
+            <div class="col-content">  </div>
+        </div>       
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+        <div class="col">  
+            <div class="col-content">  </div>
+        </div>       
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+        <div class="col">  
+            <div class="col-content">  </div>
+        </div>       
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+        <div class="col">  
+            <div class="col-content">  </div>
+        </div>       
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    <div class="col">  
+            <div class="col-content"> </div>
+        </div>
+    </div>
+<section id="full-page" class="full-page">
+
+<div class="full-page-content">
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h1> 
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, exercitationem quasi officia, optio modi a quisquam nam minima eaque cumque voluptatibus eligendi autem laudantium porro labore quas voluptatem! Aliquid, expedita?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptate optio, quod amet excepturi minima commodi sapiente et a suscipit, fugiat consequatur. Cupiditate vitae ea eaque exercitationem ex sapiente perspiciatis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid neque accusamus, quidem sunt atque earum voluptatibus cupiditate modi repudiandae est? Odio, numquam quam? Optio eius est facilis impedit quo harum!</p>
+</div>
+
+</section>
+
+
+    
+</body>
+</html>

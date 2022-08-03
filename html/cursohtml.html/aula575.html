@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+/* selecionar todos menos o do meio */ 
+p:not(.meio){
+color: blue
+}
+
+/* o p vai mudar de cor se for checked */
+input:checked + p {
+    background: red;
+}
+
+/* posso selecionar os impares, pares ou os números que eu quisesse pondo nos parenteses (odd,even, 3n - para ir de três em tres) */
+aside ol li:nth-child(3n) {
+    background-color: pink;
+}
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+    <input type="checkbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum velit dolor quaerat veritatis eaque vel quis error, ipsum doloribus voluptates quidem neque, quisquam accusantium quam sapiente at fugit. Magnam.</p>
+    <p class="meio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum velit dolor quaerat veritatis eaque vel quis error, ipsum doloribus voluptates quidem neque, quisquam accusantium quam sapiente at fugit. Magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum velit dolor quaerat veritatis eaque vel quis error, ipsum doloribus voluptates quidem neque, quisquam accusantium quam sapiente at fugit. Magnam.</p>
+
+<aside><ol>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+<li> Item </li>
+</ol>
+</aside>
+
+</body>
+</html>

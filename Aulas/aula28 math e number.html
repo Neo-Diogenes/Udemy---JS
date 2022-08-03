@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+
+    <section>
+    <h1> O seu numero é <span id="numero-titulo"> 0</span>
+    </h1>
+    <div id="texto">Texto</div>
+
+
+    </section>
+
+
+</body>
+
+<script> 
+
+let numero = prompt('Digite um número:');
+const numeroTitulo = document.getElementById('numero-titulo');
+const texto = document.getElementById('texto');
+
+numero=Number(numero);
+
+numeroTitulo.innerHTML = numero;
+texto.innerHTML = `<p> Seu número + 2 é ${numero + 2}</p>`;
+texto.innerHTML += `<p>  ${numero} é inteiro: ${Number.isInteger(numero)}.</p>`;
+texto.innerHTML += `<p> Arredondado para baixo: ${Math.floor(numero)} </p>`;
+texto.innerHTML += `<p> Arredondando para cima: ${Math.ceil(numero)}</p>   `;
+texto.innerHTML += `<p> Com duas casas decimais: ${numero.toFixed(2)}</p>  `;
+
+
+
+</script>
+
+</html>
