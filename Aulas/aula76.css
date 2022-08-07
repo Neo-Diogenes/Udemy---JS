@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #4682B4;
+}
+
+.container{
+    max-width: 400px;
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+  
+}
+
+h1 {
+    text-align: center;
+}
+
+.calculadora{
+    width: 400px;
+}
+
+.display{
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: grey;
+    color: white;
+}
+
