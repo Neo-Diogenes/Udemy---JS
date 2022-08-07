@@ -5,6 +5,7 @@ function criaCalculadora(){
         inicia(){
             this.cliqueBotoes();
             this.pressionaEnter();
+            this.pressionaEsc();
         },
 
         pressionaEnter(){
@@ -14,6 +15,16 @@ function criaCalculadora(){
                } 
             });
         },
+
+        pressionaEsc(){
+            this.display.addEventListener('keyup', e => {
+               if(e.keyCode === 27){
+                this.clearDisplay();
+               } 
+            });
+        },
+
+
 
         realizaConta(){
             let conta = this.display.value;
@@ -59,6 +70,8 @@ function criaCalculadora(){
             if(el.classList.contains('btn-eq')){
                 this.realizaConta();
             }
+
+            this.display.focus();
         });
     },
 

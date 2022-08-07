@@ -25,4 +25,4 @@ const conta = function(operador, acumulador, ...numeros){
     console.log(acumulador);
 }
 
-conta('*', 0, 20, 30, 40, 50)
+conta('*', 0, 20, 30)
