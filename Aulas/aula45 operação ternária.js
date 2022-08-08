@@ -4,7 +4,7 @@
 // operador ternário 
 // ? :
 
-const pontuaçãoUsuario = 1000;
+const pontuaçãoUsuario = 800;
 
 //if (pontuaçãoUsuario >=1000) {
    // console.log("Usuário vip");
