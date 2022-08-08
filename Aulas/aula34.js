@@ -19,7 +19,9 @@ function recebeEventoForm (evento) {
             peso: peso.value,
             altura: altura.value,
         });
-        console.log(pessoas);
+
+        console.log(pessoas)
+
 
         resultado.innerHTML = `<p>${nome.value} ${sobrenome.value} ` + ` ${peso.value} ${altura.value} </p>`;
     }
