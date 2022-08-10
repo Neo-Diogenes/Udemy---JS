@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+:root {
+    --primary-color: rgb(17,86,102)
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Joan';
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+div{
+    text-align: center;
+}
+
+.container{
+    max-width: 700px;
+    background: aliceblue;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+form input:focus {
+    outline: 2px var(--primary-color);
+}
+
+form button {
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.leftside {
+    position: absolute;
+    margin-left: 10%;
+    display: block;
+}
+
+.rightside {
+    position: relative;
+    margin-left: 50%;
+    display: block;
+}
+h1 {
+    text-align: center;
+    border: solid 2px var(--primary-color);
+}
+
+.paragrafo-resultado, .bad {
+    background-color: rgb(177, 237, 145);
+    padding: 20px;
+}
+.bad {
+    background: rgb(231, 132, 132);
+}
+
+    </style>
+</head>
+<body>
+<section class="container">  
+<h1> Tabela IMC </h1>
+
+<div class="leftside"> <strong> IMC </strong>
+<p>Menos do que 18,50</p>
+<p>Entre 18,50 e 24,90</p>
+<p> Entre 25 e 29,90</p>
+<p> Entre 30 e 34,90</p>
+<p> Entre 35 e 39,90</p>
+<p> Mais de 40</p>
+</div>
+
+<div class="rightside"> <strong>Resultado</strong>
+    <p>Abaixo do peso</p>
+    <p>Peso Normal</p>
+    <p> Sobrepeso</p>
+    <p> Obesidade grau 1</p>
+    <p> Obesidade grau 2</p>
+    <p> Obesidade grau 3</p>
+</div>
+
+<h2>Calcule seu IMC</h2>
+
+<form action="/" class="form" method="post">
+<label for="peso">Peso</label>
+<input type="text" class="peso" >
+<label for="altura">Altura </label>
+<input type="text" class="altura">
+<button type="submit">Enviar</button>
+
+</form>
+
+<div id="resultado" class="resultado"></div>
+
+</section> 
+</body>
+
+<script>
+
+let form = document.querySelector(".form");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let pesoInput = document.querySelector(".peso");
+    let alturaInput = document.querySelector(".altura");
+
+    let peso = Number(pesoInput.value);
+    let altura = Number(alturaInput.value);
+
+    const imc = getImc(peso, altura)
+    const nivelImc = getNivelImc(imc)
+
+    if(!peso){
+        setResultado("Peso inválido")
+        return;
+    }
+    if(!altura){
+        setResultado("Altura inválida")
+        return;
+    }
+
+    
+    let msg = `Seu imc é ${imc} e você está com ${nivelImc}`
+
+    setResultado(msg)
+});
+
+    function getNivelImc(imc){
+        const niveis = ["Abaixo do peso","Peso Normal","Sobrepeso","Obesidade grau 1","Obesidade grau 2","Obesidade grau 3"]
+
+        if(imc > 40) return niveis[5];
+        if(imc < 39.90) return niveis[4];
+        if(imc < 34.90) return niveis[3];
+        if(imc < 29.90) return niveis[2];
+        if(imc < 24.90) return niveis[1];
+        if(imc < 18.50) return niveis[0];
+    };
+
+    function getImc(peso, altura){
+     let imc = peso / altura ** 2
+     return imc.toFixed(2);
+    };
+
+    function criaP(){
+        p = document.createElement('p');
+        return p;
+    };
+
+    function setResultado(msg){
+        let resultado = document.querySelector(".resultado")
+        resultado.innerHTML = ""
+
+        const p = criaP();
+
+        p.innerHTML = msg;
+        resultado.appendChild(p);
+    };
+
+
+</script>
+</html>
